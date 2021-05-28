@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
                   ChangeNotifierProvider<Database>(
                       create: (context) => Database()),
                 ],
-                child: MyHomePage(),
+                child: MaterialApp(home: MyHomePage()),
               );
             }
           } else {
@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(),

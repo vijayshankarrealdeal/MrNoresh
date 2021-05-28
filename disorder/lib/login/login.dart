@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:disorder/services/auth.dart';
 import 'package:flutter/cupertino.dart';
