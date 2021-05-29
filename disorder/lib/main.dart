@@ -1,3 +1,4 @@
+import 'package:disorder/app/feeds/disorder_options.dart';
 import 'package:disorder/login/login.dart';
 import 'package:disorder/services/auth.dart';
 import 'package:disorder/services/database.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
                   ChangeNotifierProvider<Database>(
                       create: (context) => Database()),
                 ],
-                child: MaterialApp(home: MyHomePage()),
+                child: MaterialApp(home: DisorderOptions()),
               );
             }
           } else {
@@ -44,19 +45,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    
-    return Scaffold(
-      backgroundColor: Colors.blue,
-      appBar: AppBar(),
-      body: Container(
-        height: 500,
-        width: 400,
-        color: Colors.yellow,
-        child: Text("hell"),
-      ),
-    );
-  }
-}
