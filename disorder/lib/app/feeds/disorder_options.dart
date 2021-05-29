@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:disorder/app/feeds/dummy.dart';
 import 'package:disorder/app/feeds/feedsData.dart';
+import 'package:disorder/services/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,11 +12,18 @@ class DisorderOptions extends StatelessWidget {
   DisorderOptions({this.userName});
   @override
   Widget build(BuildContext context) {
+    final auth = Provider.of<Auth>(context);
     return Scaffold(
       backgroundColor: CupertinoColors.black,
       appBar: AppBar(
         title: Text('Select your disorder!'),
         backgroundColor: CupertinoColors.darkBackgroundGray,
+        actions: [
+          CupertinoButton(
+            child: Icon(Icons.exit_to_app),
+            onPressed: () => auth.signOut(),
+          ),
+        ],
       ),
       body: Consumer<FeedSettings>(
         builder: (context, data, _) {
