@@ -13,7 +13,7 @@ class DisorderOptions extends StatelessWidget {
   DisorderOptions({this.userName});
   @override
   Widget build(BuildContext context) {
-    DataSettings settings;
+    DataSettings settings = DataSettings();
     final auth = Provider.of<Auth>(context);
     return Scaffold(
       backgroundColor: CupertinoColors.black,
