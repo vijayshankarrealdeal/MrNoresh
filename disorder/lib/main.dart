@@ -1,4 +1,5 @@
 import 'package:disorder/app/feeds/disorder_options.dart';
+import 'package:disorder/app/feeds/feedsData.dart';
 import 'package:disorder/login/login.dart';
 import 'package:disorder/services/auth.dart';
 import 'package:disorder/services/database.dart';
@@ -34,6 +35,8 @@ class MyApp extends StatelessWidget {
                 providers: [
                   ChangeNotifierProvider<Database>(
                       create: (context) => Database()),
+                  ChangeNotifierProvider<FeedSettings>(
+                      create: (context) => FeedSettings()),
                 ],
                 child: MaterialApp(home: DisorderOptions()),
               );
@@ -44,4 +47,3 @@ class MyApp extends StatelessWidget {
         });
   }
 }
-
