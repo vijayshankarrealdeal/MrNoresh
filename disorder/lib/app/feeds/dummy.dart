@@ -1,16 +1,23 @@
+import 'package:disorder/app/homepage/data.dart';
 import 'package:flutter/material.dart';
 
 class DummyData extends StatelessWidget {
-  final String userName, simpleText;
+  final DataModel data;
 
-  DummyData({this.userName, this.simpleText});
+  DummyData({
+    this.data,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: Text('The name is $userName and this is $simpleText'),
+        body: Container(
+          child: Column(
+            children: [
+              Text(data.discription),
+            ],
+          ),
         ),
       ),
     );

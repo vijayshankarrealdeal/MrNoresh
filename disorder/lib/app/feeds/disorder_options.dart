@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:disorder/app/feeds/dummy.dart';
 import 'package:disorder/app/feeds/feedsData.dart';
+import 'package:disorder/app/homepage/data.dart';
 import 'package:disorder/services/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class DisorderOptions extends StatelessWidget {
   DisorderOptions({this.userName});
   @override
   Widget build(BuildContext context) {
+    DataSettings settings;
     final auth = Provider.of<Auth>(context);
     return Scaffold(
       backgroundColor: CupertinoColors.black,
@@ -33,6 +35,12 @@ class DisorderOptions extends StatelessWidget {
               child: ListView.builder(
                 itemCount: data.data.length,
                 itemBuilder: (context, index) {
+                  int ind = 0;
+                  settings.data.forEach((element) {
+                    if (element.title == data.data[index].title) {
+                      ind = index;
+                    }
+                  });
                   return ClickableImage(
                     imageUrl: data.data[index].imageName,
                     title: data.data[index].title,
@@ -40,8 +48,7 @@ class DisorderOptions extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => DummyData(
-                          userName: "",
-                          simpleText: "",
+                          data: settings.data[ind],
                         ),
                       ),
                     ),
