@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:disorder/app/homepage/data.dart';
 
-class Homepage extends StatelessWidget {
+class DummyData extends StatelessWidget {
   final DataModel data;
   final myController = TextEditingController();
 
-  Homepage({
+  DummyData({
     this.data,
   });
 
@@ -46,11 +46,11 @@ class PostCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextStyle titleTheme = Theme.of(context)
         .textTheme
-        .title
+        .headline6
         .copyWith(color: Colors.deepOrange[600]);
     final TextStyle summaryTheme =
         Theme.of(context).textTheme.bodyText1.copyWith(color: Colors.blue[900]);
-    final String title = pData.title ;
+    final String title = pData.title;
     final String summary = pData.discription;
     return AspectRatio(
       aspectRatio: 5 / 9,
@@ -61,8 +61,8 @@ class PostCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Container(child: Text(title??"", style: titleTheme)),
-              Container(child: Text(summary??"", style: summaryTheme)),
+              Container(child: Text(title ?? "", style: titleTheme)),
+              Container(child: Text(summary ?? "", style: summaryTheme)),
             ],
           ),
         ),

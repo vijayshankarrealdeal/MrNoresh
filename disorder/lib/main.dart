@@ -86,7 +86,7 @@ class Dession extends StatelessWidget {
               );
             }
           } else {
-            return CircularProgressIndicator();
+            return Center(child: CircularProgressIndicator());
           }
         });
   }
