@@ -90,4 +90,14 @@ class DataModel {
       this.pastexperience,
       this.howtheyarenow,
       this.type});
+  Map<String, dynamic> toJson() {
+    return {
+      'title': title,
+      'discription': discription,
+      "imageUrl": imageUrl,
+      "pastexperience": pastexperience,
+      "howtheyarenow": howtheyarenow,
+      "type": type,
+    };
+  }
 }
