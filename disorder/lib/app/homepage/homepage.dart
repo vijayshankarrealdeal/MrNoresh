@@ -113,17 +113,21 @@ class Homepage extends StatelessWidget {
                                             fontWeight: FontWeight.bold),
                                       ),
                                     ),
-                                    Text(
-                                      e.title,
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8.0),
+                                      child: Text(
+                                        e.title,
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold),
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
+                              SizedBox(height: 10),
                               Text(
                                 e.discription.substring(0, 150),
                                 style: TextStyle(color: Colors.black),
