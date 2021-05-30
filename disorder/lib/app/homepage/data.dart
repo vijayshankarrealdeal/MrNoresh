@@ -7,55 +7,38 @@ String dummy = '''Lorem ipsum dolor sit amet,
 class DataSettings extends ChangeNotifier {
   List<DataModel> data = [
     DataModel(
+      title: 'Anxiety',
+      imageUrl:
+          'https://images.unsplash.com/photo-1608493830924-ec843d9c98c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80',
+      discription: dummy,
+      pastexperience: dummy,
+      howtheyarenow: dummy,
+    ),
+    DataModel(
+      title: 'Panic',
+      discription: dummy,
+      pastexperience: dummy,
+      howtheyarenow: dummy,
+    ),
+    DataModel(
+        imageUrl:
+            'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=603&q=80',
         title: 'Depression',
         discription: dummy,
         pastexperience: dummy,
         howtheyarenow: dummy),
     DataModel(
-      title: 'Depression',
-      discription: dummy,
-      pastexperience: dummy,
-      howtheyarenow: dummy,
-    ),
-    DataModel(title: 'Anxiety', discription: dummy),
-    DataModel(
-      title: 'Anxiety',
-      discription: dummy,
-      pastexperience: dummy,
-      howtheyarenow: dummy,
-    ),
-    DataModel(
-      title: 'Panic',
-      discription: dummy,
-      pastexperience: dummy,
-      howtheyarenow: dummy,
-    ),
-    DataModel(
-      title: 'Panic',
-      discription: dummy,
-      pastexperience: dummy,
-      howtheyarenow: dummy,
-    ),
-    DataModel(
       title: 'Addiction',
-      discription: dummy,
-      pastexperience: dummy,
-      howtheyarenow: dummy,
-    ),
-    DataModel(
-      title: 'Addiction',
+      imageUrl:
+          'https://images.unsplash.com/photo-1601299124348-6a43706a155d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       discription: dummy,
       pastexperience: dummy,
       howtheyarenow: dummy,
     ),
     DataModel(
       title: 'Sleep-Wake',
-      discription: dummy,
-      pastexperience: dummy,
-      howtheyarenow: dummy,
-    ),
-    DataModel(
-      title: 'Sleep-Wake',
+      imageUrl:
+          'https://images.unsplash.com/photo-1545594262-ded8a9096085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80',
       discription: dummy,
       pastexperience: dummy,
       howtheyarenow: dummy,
@@ -63,12 +46,8 @@ class DataSettings extends ChangeNotifier {
     DataModel(
       title: 'Schizophrenia',
       discription: dummy,
-      pastexperience: dummy,
-      howtheyarenow: dummy,
-    ),
-    DataModel(
-      title: 'Schizophrenia',
-      discription: dummy,
+      imageUrl:
+          'https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       pastexperience: dummy,
       howtheyarenow: dummy,
     ),
