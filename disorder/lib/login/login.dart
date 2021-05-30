@@ -1,4 +1,3 @@
-
 import 'package:disorder/services/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,16 +15,26 @@ class LoginForApp extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(width: double.infinity),
-            CupertinoButton(
-                color: CupertinoColors.black,
-                child: Text("Enter As Guest"),
-                onPressed: () async => await auth.createAnoUser())
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(width: double.infinity),
+          
+              SizedBox(height: 20),
+              CupertinoButton(
+                  color: CupertinoColors.black,
+                  child: Text("Enter As Guest"),
+                  onPressed: () async {
+                    auth.some();
+                    await auth.createAnoUser();
+                  }),
+              SizedBox(height: 10),
+              auth.operation ? CircularProgressIndicator() : SizedBox()
+            ],
+          ),
         ),
       ),
     );

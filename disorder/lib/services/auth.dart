@@ -1,8 +1,19 @@
+import 'package:disorder/services/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 
 class Auth extends ChangeNotifier {
   final _refrence = FirebaseAuth.instance;
+  bool operation = false;
+  void some() {
+    operation = true;
+    notifyListeners();
+  }
+
+  void someend() {
+    operation = false;
+    notifyListeners();
+  }
 
   Stream<UserXE> get onAuthChange {
     return _refrence.authStateChanges().map(_userDetailsOfFirebase);
@@ -44,10 +55,4 @@ class Auth extends ChangeNotifier {
   }
 }
 
-class UserXE extends ChangeNotifier {
-  final String uid;
-  final String email;
-  bool isEmailVerified = false;
 
-  UserXE({@required this.uid, @required this.email, @required isEmailVerified});
-}
